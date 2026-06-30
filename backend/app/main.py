@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -28,6 +29,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origin_regex=r"https://.*\.vercel\.app" if os.getenv("VERCEL") else None,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -44,4 +46,3 @@ app.include_router(reports.router)
 @app.get("/api/health")
 def health_check() -> dict[str, str]:
     return {"status": "ok"}
-
