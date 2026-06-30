@@ -1,0 +1,76 @@
+{
+  "partner": "Northstar Sports Network",
+  "items": [
+    {
+      "partner_content_id": "NSN-1001",
+      "title": "Saturday Match Center",
+      "asset_type": "sports",
+      "channel_id": "NSN-LIVE",
+      "language": "en",
+      "content_rating": "TV-PG",
+      "playback_url": "https://stream.northstar.example/live/nsn-1001/master.m3u8",
+      "drm_required": true,
+      "is_premium": true,
+      "artwork": [
+        {
+          "artwork_url": "https://cdn.northstar.example/art/nsn-1001.jpg",
+          "width": 1920,
+          "height": 1080,
+          "file_type": "jpg"
+        }
+      ],
+      "availability": [
+        {
+          "region": "US",
+          "start_date": "2026-07-15",
+          "end_date": "2026-10-15",
+          "entitlement_package": "SPORTS-PLUS"
+        }
+      ],
+      "captions": [
+        {
+          "language": "en",
+          "region": "US",
+          "caption_url": "https://cdn.northstar.example/captions/nsn-1001.vtt"
+        }
+      ],
+      "entitlements": [
+        {
+          "package_id": "SPORTS-PLUS",
+          "package_name": "Sports Plus",
+          "region": "US",
+          "entitlement_type": "Linear Add-on"
+        }
+      ]
+    },
+    {
+      "partner_content_id": "NSN-1002",
+      "title": "",
+      "asset_type": "episode",
+      "channel_id": "NSN-LIVE",
+      "language": "en",
+      "content_rating": "TV-14",
+      "playback_url": "ftp://bad-url/nsn-1002",
+      "drm_required": false,
+      "is_premium": true,
+      "artwork": [
+        {
+          "artwork_url": "https://cdn.northstar.example/art/nsn-1002.bmp",
+          "width": 900,
+          "height": 500,
+          "file_type": "bmp"
+        }
+      ],
+      "availability": [
+        {
+          "region": "ZZ",
+          "start_date": "2026-09-30",
+          "end_date": "2026-08-01"
+        }
+      ],
+      "captions": [],
+      "entitlements": []
+    }
+  ]
+}
+

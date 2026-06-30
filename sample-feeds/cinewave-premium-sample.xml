@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed partner="CineWave Premium">
+  <item>
+    <partner_content_id>CWP-2001</partner_content_id>
+    <title>Midnight Feature</title>
+    <asset_type>movie</asset_type>
+    <channel_id>CWP-ONDEMAND</channel_id>
+    <language>en</language>
+    <content_rating>R</content_rating>
+    <playback_url>https://stream.cinewave.example/vod/cwp-2001/master.m3u8</playback_url>
+    <drm_required>true</drm_required>
+    <is_premium>true</is_premium>
+    <artwork>
+      <artwork_url>https://cdn.cinewave.example/art/cwp-2001.png</artwork_url>
+      <width>1920</width>
+      <height>1080</height>
+      <file_type>png</file_type>
+    </artwork>
+    <availability>
+      <region>US</region>
+      <start_date>2026-07-01</start_date>
+      <end_date>2027-01-01</end_date>
+      <entitlement_package>PREMIUM-MOVIES</entitlement_package>
+    </availability>
+    <captions>
+      <language>en</language>
+      <region>US</region>
+      <caption_url>https://cdn.cinewave.example/captions/cwp-2001.vtt</caption_url>
+    </captions>
+    <entitlements>
+      <package_id>PREMIUM-MOVIES</package_id>
+      <package_name>Premium Movies</package_name>
+      <region>US</region>
+      <entitlement_type>SVOD</entitlement_type>
+    </entitlements>
+  </item>
+  <item>
+    <partner_content_id>CWP-2001</partner_content_id>
+    <title>Duplicate ID Feature</title>
+    <asset_type>movie</asset_type>
+    <channel_id></channel_id>
+    <language></language>
+    <content_rating></content_rating>
+    <playback_url></playback_url>
+    <drm_required>true</drm_required>
+    <is_premium>true</is_premium>
+    <availability>
+      <region>CA</region>
+      <start_date>2026-07-10</start_date>
+      <end_date>2026-12-10</end_date>
+    </availability>
+  </item>
+</feed>
+
