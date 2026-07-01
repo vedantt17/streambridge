@@ -8,12 +8,14 @@ export default defineConfig({
     strictPort: false
   },
   build: {
+    chunkSizeWarningLimit: 900,
     rollupOptions: {
       output: {
         manualChunks: {
           react: ["react", "react-dom", "react-router-dom"],
           charts: ["recharts"],
-          icons: ["lucide-react"]
+          icons: ["lucide-react"],
+          vanta: ["vanta/dist/vanta.waves.min", "three"]
         }
       }
     }

@@ -8,6 +8,7 @@ import PartnerDetail from "./pages/PartnerDetail";
 import Partners from "./pages/Partners";
 import ProductFeedback from "./pages/ProductFeedback";
 import ReadinessReport from "./pages/ReadinessReport";
+import { VantaWavesBackground } from "./components/VantaWavesBackground";
 
 const navItems = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -21,28 +22,31 @@ const navItems = [
 
 export default function App() {
   return (
-    <div className="min-h-[100dvh] bg-ink text-slate-100">
-      <aside className="fixed inset-y-0 left-0 z-20 hidden w-72 border-r border-line bg-[#0b1423]/95 px-4 py-5 lg:block">
-        <div className="flex items-center gap-3 border-b border-line pb-5">
-          <div className="grid h-11 w-11 place-items-center rounded-lg border border-cyan-300/35 bg-cyan-400/10 text-cyan-100">
+    <div className="relative min-h-[100dvh] overflow-hidden bg-ink text-slate-100">
+      <VantaWavesBackground />
+      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_82%_12%,rgba(32,211,238,0.18),transparent_28%),linear-gradient(90deg,rgba(4,9,18,0.9)_0%,rgba(4,9,18,0.48)_42%,rgba(4,9,18,0.18)_100%)]" />
+
+      <aside className="fixed inset-y-0 left-0 z-20 hidden w-[17rem] border-r border-white/10 bg-[#07111f]/60 px-4 py-5 shadow-2xl shadow-black/20 backdrop-blur-xl lg:block">
+        <div className="flex items-center gap-3 border-b border-white/10 pb-5">
+          <div className="grid h-11 w-11 place-items-center rounded-lg border border-cyan-200/35 bg-cyan-300/10 text-cyan-100 shadow-lg shadow-cyan-950/30">
             <Activity size={22} />
           </div>
           <div>
-            <p className="text-lg font-semibold text-white">StreamBridge</p>
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Partner Console</p>
+            <p className="font-display text-2xl italic leading-none text-white">StreamBridge</p>
+            <p className="mt-1 text-[0.66rem] uppercase tracking-[0.22em] text-cyan-100/70">Partner Console</p>
           </div>
         </div>
-        <nav className="mt-6 grid gap-1">
+        <nav className="mt-7 grid gap-1.5">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `flex h-11 items-center gap-3 rounded-lg px-3 text-sm font-medium transition ${
+                `flex h-11 items-center gap-3 rounded-lg px-3 text-sm font-semibold transition duration-200 ${
                   isActive
-                    ? "bg-cyan-400/12 text-cyan-50 ring-1 ring-cyan-300/25"
-                    : "text-slate-400 hover:bg-slate-800/70 hover:text-slate-100"
+                    ? "bg-white/10 text-white ring-1 ring-cyan-200/30"
+                    : "text-slate-300/75 hover:bg-white/10 hover:text-white"
                 }`
               }
             >
@@ -53,11 +57,11 @@ export default function App() {
         </nav>
       </aside>
 
-      <header className="sticky top-0 z-10 border-b border-line bg-[#0b1423]/95 px-4 py-3 backdrop-blur lg:hidden">
+      <header className="sticky top-0 z-20 border-b border-white/10 bg-[#07111f]/70 px-4 py-3 backdrop-blur-xl lg:hidden">
         <div className="flex items-center justify-between gap-3">
           <div>
-            <p className="font-semibold text-white">StreamBridge</p>
-            <p className="text-xs text-slate-500">Partner Console</p>
+            <p className="font-display text-2xl italic leading-none text-white">StreamBridge</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-cyan-100/70">Partner Console</p>
           </div>
           <Gauge className="text-cyan-100" size={22} />
         </div>
@@ -68,10 +72,10 @@ export default function App() {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `inline-flex h-10 shrink-0 items-center gap-2 rounded-lg border px-3 text-xs font-semibold ${
+                `inline-flex h-10 shrink-0 items-center gap-2 rounded-lg border px-3 text-xs font-semibold backdrop-blur ${
                   isActive
-                    ? "border-cyan-300/35 bg-cyan-400/12 text-cyan-50"
-                    : "border-line bg-slate-900/60 text-slate-400"
+                    ? "border-cyan-200/30 bg-white/10 text-cyan-50"
+                    : "border-white/10 bg-slate-950/25 text-slate-300"
                 }`
               }
             >
@@ -82,8 +86,8 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="lg:pl-72">
-        <div className="mx-auto min-h-[100dvh] w-full max-w-[1500px] px-4 py-5 sm:px-6 lg:px-8">
+      <main className="relative z-10 lg:pl-[17rem]">
+        <div className="mx-auto min-h-[100dvh] w-full max-w-[1420px] px-4 py-6 sm:px-6 lg:px-8 xl:py-8">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/partners" element={<Partners />} />
@@ -99,4 +103,3 @@ export default function App() {
     </div>
   );
 }
-

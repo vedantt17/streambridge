@@ -16,5 +16,6 @@ frontend/vite.config.d.ts
 .env
 .DS_Store
 .playwright-cli/
+output/
 
 .vercel

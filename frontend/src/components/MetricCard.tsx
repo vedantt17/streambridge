@@ -9,18 +9,17 @@ interface MetricCardProps {
 
 export function MetricCard({ label, value, detail, icon: Icon }: MetricCardProps) {
   return (
-    <section className="rounded-lg border border-line bg-panel/80 p-4 shadow-sm shadow-black/10">
+    <section className="rounded-xl border border-white/10 bg-[#081423]/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl transition duration-200 hover:-translate-y-0.5 hover:bg-[#0a1828]/70">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-400">{label}</p>
-          <p className="mt-2 text-3xl font-semibold text-white">{value}</p>
+          <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-cyan-100/70">{label}</p>
+          <p className="mt-2 font-display text-5xl italic leading-none text-white">{value}</p>
         </div>
-        <span className="grid h-10 w-10 place-items-center rounded-lg border border-cyan-300/30 bg-cyan-400/10 text-cyan-100">
+        <span className="grid h-10 w-10 place-items-center rounded-lg border border-cyan-200/30 bg-white/10 text-cyan-100">
           <Icon size={20} />
         </span>
       </div>
-      {detail ? <p className="mt-3 text-sm text-slate-400">{detail}</p> : null}
+      {detail ? <p className="mt-4 text-sm leading-6 text-slate-300/80">{detail}</p> : null}
     </section>
   );
 }
-

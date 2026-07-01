@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,17 +7,19 @@
 :root {
   color-scheme: dark;
   background: #09111f;
-  font-family: Aptos, "Segoe UI", system-ui, sans-serif;
+  font-family: Manrope, "Segoe UI", system-ui, sans-serif;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100dvh;
-  background:
-    linear-gradient(180deg, rgba(9, 17, 31, 0.94) 0%, rgba(13, 21, 34, 1) 48%, rgba(8, 13, 23, 1) 100%),
-    #09111f;
+  background: #09111f;
   color: #e5edf7;
+}
+
+#root {
+  min-height: 100dvh;
 }
 
 button,
@@ -30,7 +34,7 @@ textarea {
 }
 
 .dashboard-scrollbar {
-  scrollbar-color: #334155 #0f172a;
+  scrollbar-color: rgba(148, 163, 184, 0.55) rgba(15, 23, 42, 0.2);
 }
 
 .dashboard-scrollbar::-webkit-scrollbar {
@@ -39,10 +43,10 @@ textarea {
 }
 
 .dashboard-scrollbar::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: rgba(148, 163, 184, 0.5);
   border-radius: 8px;
 }
 
 .dashboard-scrollbar::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: rgba(15, 23, 42, 0.2);
 }

@@ -9,13 +9,12 @@ interface PanelProps {
 
 export function Panel({ title, action, children, className = "" }: PanelProps) {
   return (
-    <section className={`rounded-lg border border-line bg-panel/75 shadow-sm shadow-black/10 ${className}`}>
-      <div className="flex min-h-14 items-center justify-between gap-3 border-b border-line px-4 py-3">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-300">{title}</h2>
+    <section className={`rounded-xl border border-white/10 bg-[#081423]/60 shadow-xl shadow-black/20 backdrop-blur-xl ${className}`}>
+      <div className="flex min-h-14 items-center justify-between gap-3 border-b border-white/10 px-5 py-3.5">
+        <h2 className="font-display text-xl italic leading-[0.95] text-white sm:text-2xl">{title}</h2>
         {action}
       </div>
-      <div className="p-4">{children}</div>
+      <div className="p-5">{children}</div>
     </section>
   );
 }
-
