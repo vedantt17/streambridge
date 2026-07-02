@@ -14,15 +14,15 @@ export function VantaWavesBackground() {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 200,
+      minHeight: 900,
       minWidth: 200,
       scale: 1,
       scaleMobile: 1,
-      color: 0x0b3d55,
-      shininess: 62,
-      waveHeight: 28,
-      waveSpeed: 0.68,
-      zoom: 0.78
+      color: 0x08758a,
+      shininess: 92,
+      waveHeight: 48,
+      waveSpeed: 0.88,
+      zoom: 1.14
     });
 
     return () => {
@@ -34,8 +34,7 @@ export function VantaWavesBackground() {
     <div
       ref={containerRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-0 opacity-95"
+      className="pointer-events-none fixed -inset-x-0 -top-[36vh] z-0 h-[150vh] opacity-100"
     />
   );
 }
-

@@ -24,9 +24,9 @@ export default function App() {
   return (
     <div className="relative min-h-[100dvh] overflow-hidden bg-ink text-slate-100">
       <VantaWavesBackground />
-      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_82%_12%,rgba(32,211,238,0.18),transparent_28%),linear-gradient(90deg,rgba(4,9,18,0.9)_0%,rgba(4,9,18,0.48)_42%,rgba(4,9,18,0.18)_100%)]" />
+      <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(90deg,rgba(4,9,18,0.66)_0%,rgba(4,9,18,0.16)_28%,rgba(4,9,18,0)_58%)]" />
 
-      <aside className="fixed inset-y-0 left-0 z-20 hidden w-[17rem] border-r border-white/10 bg-[#07111f]/60 px-4 py-5 shadow-2xl shadow-black/20 backdrop-blur-xl lg:block">
+      <aside className="fixed inset-y-0 left-0 z-20 hidden w-[17rem] border-r border-white/10 bg-[#07111f]/50 px-4 py-5 shadow-2xl shadow-black/20 backdrop-blur-xl lg:block">
         <div className="flex items-center gap-3 border-b border-white/10 pb-5">
           <div className="grid h-11 w-11 place-items-center rounded-lg border border-cyan-200/35 bg-cyan-300/10 text-cyan-100 shadow-lg shadow-cyan-950/30">
             <Activity size={22} />
@@ -57,7 +57,7 @@ export default function App() {
         </nav>
       </aside>
 
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-[#07111f]/70 px-4 py-3 backdrop-blur-xl lg:hidden">
+      <header className="sticky top-0 z-20 border-b border-white/10 bg-[#07111f]/55 px-4 py-3 backdrop-blur-xl lg:hidden">
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="font-display text-2xl italic leading-none text-white">StreamBridge</p>

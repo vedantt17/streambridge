@@ -1,6 +1,6 @@
 export function LoadingState({ label = "Loading" }: { label?: string }) {
   return (
-    <div className="grid min-h-[18rem] place-items-center rounded-xl border border-white/10 bg-[#081423]/60 backdrop-blur-xl">
+    <div className="grid min-h-[18rem] place-items-center rounded-xl border border-white/10 bg-[#081423]/40 backdrop-blur-xl">
       <div className="flex items-center gap-3 text-sm text-slate-300">
         <span className="h-3 w-3 animate-pulse rounded-full bg-cyan" />
         {label}

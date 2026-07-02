@@ -9,7 +9,7 @@ interface MetricCardProps {
 
 export function MetricCard({ label, value, detail, icon: Icon }: MetricCardProps) {
   return (
-    <section className="rounded-xl border border-white/10 bg-[#081423]/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl transition duration-200 hover:-translate-y-0.5 hover:bg-[#0a1828]/70">
+    <section className="rounded-xl border border-white/10 bg-[#081423]/35 p-5 shadow-xl shadow-black/20 backdrop-blur-xl transition duration-200 hover:-translate-y-0.5 hover:bg-[#0a1828]/50">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-cyan-100/70">{label}</p>
