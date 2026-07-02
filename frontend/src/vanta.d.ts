@@ -1,10 +1,13 @@
 declare module "vanta/dist/vanta.waves.min" {
-  import type { Object3D } from "three";
+  import type { Mesh, Object3D, Scene } from "three";
 
   export interface VantaEffect {
     destroy: () => void;
+    plane?: Mesh;
     resize?: () => void;
+    scene?: Scene;
     setOptions?: (options: Record<string, unknown>) => void;
+    triggerMouseMove?: (x: number, y: number) => void;
   }
 
   export interface VantaWavesOptions {
@@ -27,4 +30,3 @@ declare module "vanta/dist/vanta.waves.min" {
 
   export default function WAVES(options: VantaWavesOptions): VantaEffect;
 }
-
